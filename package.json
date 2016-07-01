@@ -1,0 +1,29 @@
+{
+  "name": "soprano-saxophone",
+  "version": "0.9.0",
+  "description": "Install and launch Geckodriver for Mac, Linux or Windows.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "install": "node install.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "webdriver",
+    "geckodriver",
+    "firefox"
+  ],
+  "author": "Tobias Lidskog <tobias@lidskog.se>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tobli/soprano-saxophone.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "download": "4.4.3",
+    "download-status": "2.2.1"
+  },
+  "devDependencies": {
+    "request": "^2.69.0"
+  }
+}
