@@ -6,15 +6,17 @@ var Download = require('download'),
     version = require('./package').version;
 
 function getGeckodriverUrl() {
-  var urlBase = 'https://github.com/mozilla/geckodriver/releases/download/v' + version +'/';
+  var urlBase = `https://github.com/mozilla/geckodriver/releases/download/v${version}/`;
 
   switch (os.platform()) {
     case 'darwin':
-      return urlBase + 'geckodriver-v' + version + '-macos.tar.gz';
+      return `${urlBase}geckodriver-v${version}-macos.tar.gz`;
     case 'linux':
-      return urlBase + 'geckodriver-v' + version + '-linux64.tar.gz';
+      return `${urlBase}geckodriver-v${version}-linux64.tar.gz`;
     case 'win32':
-      return urlBase + 'geckodriver-v' + version + '-win32.zip';
+      return `${urlBase}geckodriver-v${version}-win32.zip`;
+    case 'win64':
+      return `${urlBase}geckodriver-v${version}-win64.zip`;
     default:
       throw new Error('Unsupported platform: ' + os.platform());
   }
