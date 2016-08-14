@@ -13,8 +13,9 @@ function getGeckodriverUrl() {
       return `${urlBase}geckodriver-v${version}-macos.tar.gz`;
     case 'linux':
       return `${urlBase}geckodriver-v${version}-linux64.tar.gz`;
-    case 'win32':
-      return `${urlBase}geckodriver-v${version}-win32.zip`;
+    // ooops there are no current win32 release of geckodriver
+    // case 'win32':
+    // return `${urlBase}geckodriver-v${version}-win32.zip`;
     case 'win64':
       return `${urlBase}geckodriver-v${version}-win64.zip`;
     default:
