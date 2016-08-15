@@ -15,9 +15,10 @@ function getGeckodriverUrl() {
       return `${urlBase}geckodriver-v${version}-linux64.tar.gz`;
     // ooops there are no current win32 release of geckodriver
     // case 'win32':
-    // return `${urlBase}geckodriver-v${version}-win32.zip`;
-    case 'win64':
-      return `${urlBase}geckodriver-v${version}-win64.zip`;
+    // but let it fail until the add it
+    case 'win32':
+      const arch = (os.arch() === 'x64') ? 'win64': 'win32';
+      return `${urlBase}geckodriver-v${version}-${arch}.zip`;
     default:
       throw new Error('Unsupported platform: ' + os.platform());
   }
