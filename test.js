@@ -2,7 +2,7 @@ var cp = require('child_process'),
     geckodriver = require('./').geckodriver,
     packageVersion = require('./package.json').version;
 
-var expectedVersionPrefix = 'geckodriver v' + packageVersion;
+var expectedVersionPrefix = 'geckodriver ' + packageVersion;
 
 var driverVersion = cp.execFileSync(geckodriver.binPath(), ['--version']).toString();
 
