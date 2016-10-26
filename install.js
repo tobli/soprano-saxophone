@@ -6,7 +6,12 @@ var Download = require('download'),
     version = require('./package').version;
 
 function getGeckodriverUrl() {
-  var urlBase = `https://github.com/mozilla/geckodriver/releases/download/v${version}/`;
+  var urlBase;
+  if (process.env.GECKODRIVER_BASE_URL) {
+    urlBase = process.env.GECKODRIVER_BASE_URL;
+  } else {
+    urlBase = `https://github.com/mozilla/geckodriver/releases/download/v${version}/`;
+  }
 
   switch (os.platform()) {
     case 'darwin':
