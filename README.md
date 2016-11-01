@@ -14,3 +14,5 @@ var driver = require('soprano-saxophone').geckodriver;
 var p = driver.binPath();
 // launch geckodriver from path
 ```
+
+You can ovveride the download location by setting *process.env.GECKODRIVER_BASE_URL*.
