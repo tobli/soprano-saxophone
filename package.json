@@ -1,6 +1,6 @@
 {
   "name": "soprano-saxophone",
-  "version": "0.18.0",
+  "version": "0.19.1",
   "description": "Install and launch Geckodriver for Mac, Linux or Windows.",
   "main": "index.js",
   "scripts": {
